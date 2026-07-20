@@ -201,16 +201,18 @@ export const portfolioCategories: { id: PortfolioCategory; label: string }[] = [
 ];
 
 export const portfolioItems: PortfolioItem[] = [
-  { id: 1, title: "Barat Groom Portrait — Dr. Umair", category: "barat", image: "/portfolio/barat-01-dr-umair.jpg", aspect: "square", location: "Punjab, Pakistan" },
-  { id: 2, title: "Bridal Editorial — The Muse", category: "bridal", image: "/portfolio/bridal-01-mishi-joiya.jpg", aspect: "square", location: "Burewala" },
-  { id: 3, title: "Bridal Portrait — Golden Leaves", category: "bridal", image: "/portfolio/bridal-02-anmol-golden-leaves.jpg", aspect: "square", location: "Burewala" },
-  { id: 4, title: "Outdoor Bridal Glow-Up — Abeeha Hussain", category: "bridal", image: "/portfolio/bridal-03-abeeha-outdoor.jpg", aspect: "square", location: "Burewala" },
-  { id: 5, title: "Barat Groom Ready (GRWM)", category: "barat", image: "/portfolio/barat-02-groom-grwm.jpg", aspect: "square", location: "Burewala" },
-  { id: 6, title: "Bridal Salon Makeover — Fashion Editorial", category: "fashion", image: "/portfolio/fashion-01-salon-makeover.jpg", aspect: "tall", location: "Burewala" },
-  { id: 7, title: "Outdoor Mehndi Setup", category: "mehndi", image: "/portfolio/mehndi-01-outdoor-setup.jpg", aspect: "wide", location: "Punjab, Pakistan" },
-  { id: 8, title: "Groom Ready — Amir", category: "barat", image: "/portfolio/barat-03-amir-groom.jpg", aspect: "wide", location: "Punjab, Pakistan" },
-  { id: 9, title: "Outdoor Bridal Film — Canal Bungalow", category: "bridal", image: "/portfolio/bridal-04-canal-bungalow-a.jpg", aspect: "tall", location: "Burewala" },
-  { id: 10, title: "Outdoor Bridal Film — Canal Bungalow II", category: "bridal", image: "/portfolio/bridal-05-canal-bungalow-b.jpg", aspect: "tall", location: "Burewala" },
+  { id: 1, title: "Nikah Venue Setup", category: "nikah", image: "/portfolio/nikah-01-venue-setup.jpg", aspect: "wide", location: "Chishtian" },
+  { id: 2, title: "Mehndi Setup — Chishtiya Taj Palace", category: "mehndi", image: "/portfolio/mehndi-01-chishtiya-taj-palace.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 3, title: "Groom's Mehndi Night Arrival", category: "mehndi", image: "/portfolio/mehndi-02-groom-arrival.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 4, title: "Barat Groom Ready — Shehroz Bhatti", category: "barat", image: "/portfolio/barat-01-shehroz-groom-ready.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 5, title: "Barat Day Turban Moment", category: "barat", image: "/portfolio/barat-02-groom-turban-moment.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 6, title: "Groom Portrait", category: "barat", image: "/portfolio/barat-03-groom-portrait.jpg", aspect: "square" },
+  { id: 7, title: "Walima Reception Hall", category: "walima", image: "/portfolio/walima-01-reception-hall.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 8, title: "Bridal Mirror Portrait", category: "bridal", image: "/portfolio/bridal-01-mirror-portrait.jpg", aspect: "square" },
+  { id: 9, title: "Bridal Henna Detail", category: "bridal", image: "/portfolio/bridal-02-henna-hands.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 10, title: "Sherwani Fabric Detail", category: "fashion", image: "/portfolio/fashion-01-fabric-detail.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 11, title: "Alkhidmat Foundation Iftar Coverage", category: "corporate", image: "/portfolio/corporate-01-alkhidmat-iftar.jpg", aspect: "wide", location: "Burewala" },
+  { id: 12, title: "Jashan-e-Azadi Community Program", category: "corporate", image: "/portfolio/corporate-02-jashan-e-azadi.jpg", aspect: "wide", location: "Minchanabad" },
 ];
 
 export const featuredFilm = {
