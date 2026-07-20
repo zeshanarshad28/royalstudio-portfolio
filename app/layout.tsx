@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond, Poppins } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { siteConfig } from "@/lib/data";
+import { pageKeywords, siteConfig } from "@/lib/data";
 import { getLocalBusinessSchema, getWebsiteSchema } from "@/lib/seo";
 import "./globals.css";
 
@@ -33,16 +33,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: [
-    "Wedding Photographer Burewala",
-    "Wedding Photographer Pakistan",
-    "Luxury Wedding Photographer Pakistan",
-    "Cinematic Wedding Films Pakistan",
-    "Nikah Photographer",
-    "Mehndi Photography",
-    "Barat Photography",
-    "Walima Photography",
-  ],
+  keywords: [pageKeywords.home.primary, ...pageKeywords.home.secondary],
   authors: [{ name: siteConfig.founders.join(", ") }],
   openGraph: {
     type: "website",

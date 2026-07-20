@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
 import AboutPreview from "@/components/home/AboutPreview";
 import ServicesPreview from "@/components/home/ServicesPreview";
@@ -8,6 +9,23 @@ import Testimonials from "@/components/home/Testimonials";
 import Statistics from "@/components/home/Statistics";
 import FAQ from "@/components/home/FAQ";
 import ContactCTA from "@/components/home/ContactCTA";
+import { pageKeywords, siteConfig } from "@/lib/data";
+import { getCanonical } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: `${siteConfig.name} | Luxury Wedding Photography Pakistan`,
+  description: siteConfig.description,
+  keywords: [pageKeywords.home.primary, ...pageKeywords.home.secondary],
+  alternates: getCanonical("/"),
+  openGraph: {
+    title: `${siteConfig.name} | We Capture Your Memories`,
+    description: siteConfig.description,
+    images: [{ url: "/portfolio/couple-03-walima-laugh.jpg", width: 1280, height: 720, alt: siteConfig.name }],
+  },
+  twitter: {
+    images: ["/portfolio/couple-03-walima-laugh.jpg"],
+  },
+};
 
 export default function HomePage() {
   return (

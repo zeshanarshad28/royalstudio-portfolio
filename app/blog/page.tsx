@@ -3,12 +3,23 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHeader from "@/components/layout/PageHeader";
 import AnimatedSection from "@/components/shared/AnimatedSection";
-import { blogPosts } from "@/lib/data";
+import { blogPosts, pageKeywords } from "@/lib/data";
+import { getCanonical } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Blog",
   description:
     "Royal Studio blog — wedding planning tips, photography guides, bridal advice, and behind-the-scenes stories from Pakistan's luxury wedding photographers.",
+  keywords: [pageKeywords.blog.primary, ...pageKeywords.blog.secondary],
+  alternates: getCanonical("/blog"),
+  openGraph: {
+    title: "Royal Studio Journal",
+    description: "Wedding planning tips, photography guides, bridal advice, and behind-the-scenes stories.",
+    images: [{ url: "/portfolio/walima-03-venue-aerial.jpg", width: 1280, height: 720, alt: "Royal Studio wedding venue" }],
+  },
+  twitter: {
+    images: ["/portfolio/walima-03-venue-aerial.jpg"],
+  },
 };
 
 export default function BlogPage() {

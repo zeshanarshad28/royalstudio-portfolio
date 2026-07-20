@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/lib/data";
-import { getBreadcrumbSchema } from "@/lib/seo";
+import { getBlogPostingSchema, getBreadcrumbSchema, getCanonical } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: getCanonical(`/blog/${post.slug}`),
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -34,11 +35,14 @@ export default async function BlogPostPage({ params }: Props) {
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
-  const schema = getBreadcrumbSchema([
-    { name: "Home", url: "/" },
-    { name: "Blog", url: "/blog" },
-    { name: post.title, url: `/blog/${post.slug}` },
-  ]);
+  const schema = [
+    getBreadcrumbSchema([
+      { name: "Home", url: "/" },
+      { name: "Blog", url: "/blog" },
+      { name: post.title, url: `/blog/${post.slug}` },
+    ]),
+    getBlogPostingSchema(post),
+  ];
 
   return (
     <main>

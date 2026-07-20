@@ -48,7 +48,7 @@ export default function PortfolioGrid({
       className={showHeading ? "section-padding bg-surface" : ""}
     >
       <div className="mx-auto max-w-7xl">
-        {showHeading && (
+        {showHeading ? (
           <AnimatedSection>
             <SectionHeading
               label="Portfolio"
@@ -56,6 +56,8 @@ export default function PortfolioGrid({
               description="Nikah, Mehndi, Barat, Walima, and beyond — explore our curated wedding gallery."
             />
           </AnimatedSection>
+        ) : (
+          <h2 className="sr-only">Portfolio Gallery</h2>
         )}
 
         <AnimatedSection>

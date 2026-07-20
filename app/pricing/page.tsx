@@ -4,18 +4,35 @@ import { Check } from "lucide-react";
 import PageHeader from "@/components/layout/PageHeader";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import { Button } from "@/components/ui/button";
-import { pricingPackages } from "@/lib/data";
+import { pageKeywords, pricingPackages } from "@/lib/data";
+import { getCanonical, getOfferCatalogSchema } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Pricing",
   description:
     "Royal Studio wedding photography packages — Essential from PKR 50,000, Premium, and Royal Signature up to PKR 300,000. Request a custom quote.",
+  keywords: [pageKeywords.pricing.primary, ...pageKeywords.pricing.secondary],
+  alternates: getCanonical("/pricing"),
+  openGraph: {
+    title: "Royal Studio Pricing",
+    description: "Luxury wedding photography packages — Essential from PKR 50,000, Premium, and Royal Signature up to PKR 300,000.",
+    images: [{ url: "/portfolio/indoor-01-floral-ceiling-decor.jpg", width: 1280, height: 720, alt: "Royal Studio luxury event decor" }],
+  },
+  twitter: {
+    images: ["/portfolio/indoor-01-floral-ceiling-decor.jpg"],
+  },
 };
 
 export default function PricingPage() {
+  const schema = getOfferCatalogSchema(pricingPackages);
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <PageHeader
         title="Pricing"
         description="Luxury packages designed for every celebration. Custom quotes available for multi-day and destination weddings."
@@ -43,7 +60,7 @@ export default function PricingPage() {
                       Most Popular
                     </span>
                   )}
-                  <h3 className="font-display text-2xl">{pkg.name}</h3>
+                  <h2 className="font-display text-2xl">{pkg.name}</h2>
                   <p className="mt-1 text-sm opacity-70">{pkg.priceNote}</p>
                   <p className="mt-2 font-display text-3xl text-accent">{pkg.price}</p>
                   <p className="mt-4 text-sm leading-relaxed opacity-80">

@@ -469,8 +469,9 @@ export const blogPosts: BlogPost[] = [
     slug: "wedding-planning-checklist-pakistan",
     title: "The Ultimate Wedding Planning Checklist for Pakistani Couples",
     excerpt: "A comprehensive guide to planning your Nikah, Mehndi, Barat, and Walima with confidence.",
-    image: "/portfolio/barat-01-dr-umair.jpg",
+    image: "/portfolio/walima-03-venue-aerial.jpg",
     date: "June 15, 2026",
+    dateISO: "2026-06-15",
     category: "Wedding Planning",
     content:
       "Planning a Pakistani wedding means coordinating several distinct events — Nikah, Mehndi, Barat, and Walima — each with its own venue, guest list, outfits, and vendors. Unlike a single-day wedding, a multi-event celebration rewards couples who start early and work from a clear timeline rather than tackling everything at once.\n\n" +
@@ -486,8 +487,9 @@ export const blogPosts: BlogPost[] = [
     slug: "choose-wedding-photographer",
     title: "How to Choose the Right Wedding Photographer in Pakistan",
     excerpt: "Expert tips on evaluating portfolios, packages, and finding your perfect match.",
-    image: "/portfolio/bridal-04-canal-bungalow-a.jpg",
+    image: "/portfolio/bridal-01-mirror-portrait.jpg",
     date: "June 1, 2026",
+    dateISO: "2026-06-01",
     category: "Photography Tips",
     content:
       "Your wedding photographer is one of the few vendors whose work you'll still be looking at decades later. With dozens of studios advertising in every city, here's how to actually evaluate who's right for your day.\n\n" +
@@ -504,8 +506,9 @@ export const blogPosts: BlogPost[] = [
     slug: "bridal-portrait-guide",
     title: "Bridal Portrait Guide: Posing, Lighting & Timing",
     excerpt: "Everything brides need to know for stunning editorial portraits.",
-    image: "/portfolio/bridal-02-anmol-golden-leaves.jpg",
+    image: "/portfolio/bridal-03-outdoor-tree.jpg",
     date: "May 20, 2026",
+    dateISO: "2026-05-20",
     category: "Bridal Guides",
     content:
       "Bridal portraits are some of the most looked-at images from any wedding — they're the ones printed largest in albums, shared most on social media, and remembered longest. A little preparation on timing, lighting, and posing makes the difference between portraits that feel stiff and ones that feel effortless.\n\n" +
@@ -523,6 +526,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Go behind the lens with our team and see how a Royal Studio wedding weekend comes together, from first inquiry to final delivery.",
     image: "/team/team.webp",
     date: "May 5, 2026",
+    dateISO: "2026-05-05",
     category: "Behind the Scenes",
     content:
       "Couples usually only see the finished gallery and film — the polished end result of a process that actually starts months before the wedding day itself. Here's what happens on our end, from the first message to the final delivery.\n\n" +
@@ -544,17 +548,78 @@ export const blogCategories = [
   "Behind the Scenes",
 ];
 
-export const seoKeywords = [
-  "Wedding Photographer Burewala",
-  "Wedding Photographer Pakistan",
-  "Luxury Wedding Photographer Pakistan",
-  "Cinematic Wedding Films Pakistan",
-  "Bridal Photography Burewala",
-  "Nikah Photographer",
-  "Mehndi Photography",
-  "Barat Photography",
-  "Walima Photography",
-];
+export const pageKeywords = {
+  home: {
+    primary: "Luxury Wedding Photographer Burewala",
+    secondary: [
+      "Wedding Photographer & Cinematographer Pakistan",
+      "Nikah Mehndi Barat Walima Photography",
+      "Wedding Photographer Serving Vehari & Multan",
+      "Cinematic Wedding Films Pakistan",
+    ],
+  },
+  about: {
+    primary: "Wedding Photography Studio Burewala",
+    secondary: [
+      "Luxury Wedding Photographers Pakistan",
+      "Royal Studio Founders Muhammad Ramzan Talha Ramay",
+      "Professional Wedding Photography Team Punjab",
+    ],
+  },
+  services: {
+    primary: "Wedding Photography & Cinematography Services Pakistan",
+    secondary: [
+      "Nikah Photography Burewala",
+      "Mehndi Photography Vehari",
+      "Barat Cinematography Multan",
+      "Walima Photography Sahiwal",
+      "Bridal Portrait Photographer Punjab",
+      "Fashion & Corporate Event Photography Pakistan",
+    ],
+  },
+  pricing: {
+    primary: "Wedding Photography Packages Pakistan",
+    secondary: [
+      "Wedding Photography Price PKR Burewala",
+      "Affordable Luxury Wedding Photographer Pakistan",
+      "Nikah Barat Walima Photography Package",
+      "Wedding Photography Prices 2026",
+    ],
+  },
+  portfolio: {
+    primary: "Wedding Photography Portfolio Pakistan",
+    secondary: [
+      "Bridal Portrait Gallery Punjab",
+      "Nikah Mehndi Barat Walima Photo Gallery",
+      "Wedding Photography Portfolio Multan Lahore Islamabad",
+    ],
+  },
+  weddingFilms: {
+    primary: "Cinematic Wedding Films Pakistan",
+    secondary: [
+      "Wedding Highlight Film Burewala",
+      "Wedding Trailer Videographer Punjab",
+      "Documentary Style Wedding Film Pakistan",
+      "Barat Cinematography Drone Coverage",
+    ],
+  },
+  blog: {
+    primary: "Wedding Planning & Photography Guides Pakistan",
+    secondary: [
+      "Wedding Planning Checklist Pakistan",
+      "How to Choose a Wedding Photographer",
+      "Bridal Portrait Tips",
+      "Behind the Scenes Wedding Photography",
+    ],
+  },
+  contact: {
+    primary: "Book Wedding Photographer Burewala",
+    secondary: [
+      "Contact Luxury Wedding Photography Studio Punjab",
+      "Wedding Photographer Burewala Vehari Multan",
+    ],
+  },
+} as const;
 
 export const heroVideoId = "QF3BmojTrKQ";
 

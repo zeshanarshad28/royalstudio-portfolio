@@ -6,12 +6,23 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import InquiryForm from "@/components/forms/InquiryForm";
 import WhatsAppButton from "@/components/shared/WhatsAppButton";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/data";
+import { pageKeywords, siteConfig } from "@/lib/data";
+import { getCanonical } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
     "Contact Royal Studio for luxury wedding photography in Burewala, Pakistan. Call 03084877073 or send a wedding inquiry.",
+  keywords: [pageKeywords.contact.primary, ...pageKeywords.contact.secondary],
+  alternates: getCanonical("/contact"),
+  openGraph: {
+    title: "Contact Royal Studio",
+    description: "Check availability for your wedding date and send us your inquiry.",
+    images: [{ url: "/portfolio/couple-04-annum-ali-walima.jpg", width: 1280, height: 720, alt: "Royal Studio wedding couple" }],
+  },
+  twitter: {
+    images: ["/portfolio/couple-04-annum-ali-walima.jpg"],
+  },
 };
 
 export default function ContactPage() {

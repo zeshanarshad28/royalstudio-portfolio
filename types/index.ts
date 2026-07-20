@@ -38,6 +38,7 @@ export interface BlogPost {
   excerpt: string;
   image: string;
   date: string;
+  dateISO: string;
   category: string;
   content: string;
 }

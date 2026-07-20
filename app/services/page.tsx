@@ -16,12 +16,23 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { detailedServices } from "@/lib/data";
+import { detailedServices, pageKeywords } from "@/lib/data";
+import { getCanonical, getServiceSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
     "Royal Studio services — wedding photography, cinematic films, bridal editorials, fashion campaigns, corporate events, and product photography in Pakistan.",
+  keywords: [pageKeywords.services.primary, ...pageKeywords.services.secondary],
+  alternates: getCanonical("/services"),
+  openGraph: {
+    title: "Royal Studio Services",
+    description: "Comprehensive luxury photography and filmmaking for weddings, brands, and events.",
+    images: [{ url: "/portfolio/walima-04-grand-venue.jpg", width: 1280, height: 720, alt: "Royal Studio wedding venue coverage" }],
+  },
+  twitter: {
+    images: ["/portfolio/walima-04-grand-venue.jpg"],
+  },
 };
 
 const iconMap: Record<string, LucideIcon> = {
@@ -34,8 +45,14 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 export default function ServicesPage() {
+  const schema = detailedServices.map((service) => getServiceSchema(service, service.id));
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <PageHeader
         title="Services"
         description="Comprehensive luxury photography and filmmaking for weddings, brands, and events."
@@ -70,7 +87,7 @@ export default function ServicesPage() {
 
                   <div className="grid gap-8 md:grid-cols-3">
                     <div className="rounded-[12px] border border-border bg-background p-6">
-                      <h4 className="mb-3 font-display text-lg text-primary">Deliverables</h4>
+                      <h3 className="mb-3 font-display text-lg text-primary">Deliverables</h3>
                       <ul className="space-y-2 text-sm text-text-muted">
                         {service.deliverables.map((d) => (
                           <li key={d}>· {d}</li>
@@ -78,7 +95,7 @@ export default function ServicesPage() {
                       </ul>
                     </div>
                     <div className="rounded-[12px] border border-border bg-background p-6">
-                      <h4 className="mb-3 font-display text-lg text-primary">Process</h4>
+                      <h3 className="mb-3 font-display text-lg text-primary">Process</h3>
                       <ul className="space-y-2 text-sm text-text-muted">
                         {service.process.map((p) => (
                           <li key={p}>· {p}</li>
@@ -86,7 +103,7 @@ export default function ServicesPage() {
                       </ul>
                     </div>
                     <div className="rounded-[12px] border border-border bg-background p-6">
-                      <h4 className="mb-3 font-display text-lg text-primary">Equipment</h4>
+                      <h3 className="mb-3 font-display text-lg text-primary">Equipment</h3>
                       <ul className="space-y-2 text-sm text-text-muted">
                         {service.equipment.map((e) => (
                           <li key={e}>· {e}</li>
