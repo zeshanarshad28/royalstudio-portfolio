@@ -7,7 +7,14 @@ export type PortfolioCategory =
   | "bridal"
   | "couple"
   | "fashion"
-  | "corporate";
+  | "corporate"
+  | "indoor"
+  | "outdoor"
+  | "boys"
+  | "groom"
+  | "bride"
+  | "birthday"
+  | "expo";
 
 export interface PortfolioItem {
   id: number;

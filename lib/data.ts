@@ -198,6 +198,13 @@ export const portfolioCategories: { id: PortfolioCategory; label: string }[] = [
   { id: "couple", label: "Couple Portraits" },
   { id: "fashion", label: "Fashion" },
   { id: "corporate", label: "Corporate" },
+  { id: "indoor", label: "Indoor" },
+  { id: "outdoor", label: "Outdoor" },
+  { id: "boys", label: "Boys" },
+  { id: "groom", label: "Groom" },
+  { id: "bride", label: "Bride" },
+  { id: "birthday", label: "Birthday" },
+  { id: "expo", label: "Expo" },
 ];
 
 export const portfolioItems: PortfolioItem[] = [
@@ -215,6 +222,15 @@ export const portfolioItems: PortfolioItem[] = [
   { id: 12, title: "Sherwani Fabric Detail", category: "fashion", image: "/portfolio/fashion-01-fabric-detail.jpg", aspect: "wide", location: "Punjab, Pakistan" },
   { id: 13, title: "Alkhidmat Foundation Iftar Coverage", category: "corporate", image: "/portfolio/corporate-01-alkhidmat-iftar.jpg", aspect: "wide", location: "Burewala" },
   { id: 14, title: "Jashan-e-Azadi Community Program", category: "corporate", image: "/portfolio/corporate-02-jashan-e-azadi.jpg", aspect: "wide", location: "Minchanabad" },
+  { id: 15, title: "Floral Ceiling Decor", category: "indoor", image: "/portfolio/indoor-01-floral-ceiling-decor.jpg", aspect: "wide", location: "Burewala" },
+  { id: 16, title: "Night Drive", category: "outdoor", image: "/portfolio/outdoor-01-night-drive.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 17, title: "Evening Garden Gathering", category: "outdoor", image: "/portfolio/outdoor-02-evening-gathering.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 18, title: "Squad Night Out", category: "boys", image: "/portfolio/boys-01-squad-night-out.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 19, title: "Groom Ready — Amir", category: "groom", image: "/portfolio/groom-01-amir-outdoor-ready.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 20, title: "Bride Courtyard Profile", category: "bride", image: "/portfolio/bride-01-courtyard-profile.jpg", aspect: "tall", location: "Punjab, Pakistan" },
+  { id: 21, title: "Birthday Swing", category: "birthday", image: "/portfolio/birthday-01-swing.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 22, title: "Garden Birthday Party", category: "birthday", image: "/portfolio/birthday-02-garden-party.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 23, title: "Waddian Mela — Community Fair Coverage", category: "expo", image: "/portfolio/expo-01-waddian-mela.jpg", aspect: "wide", location: "Zarai University, Faisalabad (Burewala Campus)" },
 ];
 
 export const featuredFilm = {

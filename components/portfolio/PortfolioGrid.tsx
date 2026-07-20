@@ -102,54 +102,50 @@ export default function PortfolioGrid({
             </div>
           </div>
         ) : (
-        <motion.div layout className="columns-1 gap-4 sm:columns-2 lg:columns-3">
-          <AnimatePresence mode="popLayout">
-            {displayed.map((item, i) => (
-              <motion.button
-                key={item.id}
-                layout
-                initial={{ opacity: 0, scale: 0.97 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.97 }}
-                transition={{ duration: 0.35, delay: i * 0.03 }}
-                onClick={() => setLightbox(item)}
-                className="group relative mb-4 block w-full break-inside-avoid overflow-hidden rounded-[12px]"
+        <div key={activeFilter} className="columns-1 gap-4 sm:columns-2 lg:columns-3">
+          {displayed.map((item, i) => (
+            <motion.button
+              key={item.id}
+              initial={{ opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.35, delay: i * 0.03 }}
+              onClick={() => setLightbox(item)}
+              className="group relative mb-4 block w-full break-inside-avoid overflow-hidden rounded-[12px]"
+            >
+              <div
+                className={`relative overflow-hidden ${
+                  item.aspect === "tall"
+                    ? "aspect-[3/4]"
+                    : item.aspect === "wide"
+                      ? "aspect-[16/10]"
+                      : "aspect-square"
+                }`}
               >
-                <div
-                  className={`relative overflow-hidden ${
-                    item.aspect === "tall"
-                      ? "aspect-[3/4]"
-                      : item.aspect === "wide"
-                        ? "aspect-[16/10]"
-                        : "aspect-square"
-                  }`}
-                >
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    loading="lazy"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-primary/60 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                    <h3 className="font-display text-xl text-secondary">
-                      {item.title}
-                    </h3>
-                    <p className="mt-1 text-xs tracking-widest uppercase text-accent">
-                      {item.category}
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  loading="lazy"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-primary/60 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                  <h3 className="font-display text-xl text-secondary">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-xs tracking-widest uppercase text-accent">
+                    {item.category}
+                  </p>
+                  {item.location && (
+                    <p className="mt-1 text-xs text-secondary/70">
+                      {item.location}
                     </p>
-                    {item.location && (
-                      <p className="mt-1 text-xs text-secondary/70">
-                        {item.location}
-                      </p>
-                    )}
-                  </div>
+                  )}
                 </div>
-              </motion.button>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+              </div>
+            </motion.button>
+          ))}
+        </div>
         )}
 
         {hasMore && (
