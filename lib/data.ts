@@ -210,9 +210,11 @@ export const portfolioItems: PortfolioItem[] = [
   { id: 7, title: "Walima Reception Hall", category: "walima", image: "/portfolio/walima-01-reception-hall.jpg", aspect: "wide", location: "Punjab, Pakistan" },
   { id: 8, title: "Bridal Mirror Portrait", category: "bridal", image: "/portfolio/bridal-01-mirror-portrait.jpg", aspect: "square" },
   { id: 9, title: "Bridal Henna Detail", category: "bridal", image: "/portfolio/bridal-02-henna-hands.jpg", aspect: "wide", location: "Punjab, Pakistan" },
-  { id: 10, title: "Sherwani Fabric Detail", category: "fashion", image: "/portfolio/fashion-01-fabric-detail.jpg", aspect: "wide", location: "Punjab, Pakistan" },
-  { id: 11, title: "Alkhidmat Foundation Iftar Coverage", category: "corporate", image: "/portfolio/corporate-01-alkhidmat-iftar.jpg", aspect: "wide", location: "Burewala" },
-  { id: 12, title: "Jashan-e-Azadi Community Program", category: "corporate", image: "/portfolio/corporate-02-jashan-e-azadi.jpg", aspect: "wide", location: "Minchanabad" },
+  { id: 10, title: "Outdoor Bridal Portrait", category: "bridal", image: "/portfolio/bridal-03-outdoor-tree.jpg", aspect: "tall", location: "Punjab, Pakistan" },
+  { id: 11, title: "Bridal Courtyard Portrait", category: "bridal", image: "/portfolio/bridal-04-courtyard-portrait.jpg", aspect: "tall", location: "Punjab, Pakistan" },
+  { id: 12, title: "Sherwani Fabric Detail", category: "fashion", image: "/portfolio/fashion-01-fabric-detail.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 13, title: "Alkhidmat Foundation Iftar Coverage", category: "corporate", image: "/portfolio/corporate-01-alkhidmat-iftar.jpg", aspect: "wide", location: "Burewala" },
+  { id: 14, title: "Jashan-e-Azadi Community Program", category: "corporate", image: "/portfolio/corporate-02-jashan-e-azadi.jpg", aspect: "wide", location: "Minchanabad" },
 ];
 
 export const featuredFilm = {
