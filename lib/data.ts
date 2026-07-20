@@ -30,6 +30,7 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/royalstudio089/",
     facebook: "https://www.facebook.com/royalstudio089/",
     youtube: "https://www.youtube.com/@royalstudio089",
+    tiktok: "https://www.tiktok.com/@royalstudio089",
     maps: "https://maps.app.goo.gl/5rDZjYPNEKke33Fn7",
   },
   citiesServed: [
@@ -200,63 +201,79 @@ export const portfolioCategories: { id: PortfolioCategory; label: string }[] = [
 ];
 
 export const portfolioItems: PortfolioItem[] = [
-  { id: 1, title: "Nikah — Amara & Hassan", category: "nikah", image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80", aspect: "tall", location: "Lahore", exif: { camera: "Sony A7IV", lens: "85mm f/1.4", aperture: "f/1.8", shutter: "1/400", iso: "400" } },
-  { id: 2, title: "Mehndi Night", category: "mehndi", image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80", aspect: "wide", location: "Multan" },
-  { id: 3, title: "Barat Procession", category: "barat", image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80", aspect: "square", location: "Burewala" },
-  { id: 4, title: "Walima Reception", category: "walima", image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80", aspect: "wide", location: "Faisalabad" },
-  { id: 5, title: "Bridal Portrait", category: "bridal", image: "https://images.unsplash.com/photo-1594552070431-25809a90ccc2?w=800&q=80", aspect: "tall", location: "Lahore" },
-  { id: 6, title: "Golden Hour Couple", category: "couple", image: "https://images.unsplash.com/photo-1529634806980-85c493dde6ae?w=800&q=80", aspect: "tall", location: "Bahawalpur" },
-  { id: 7, title: "Fashion Editorial", category: "fashion", image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80", aspect: "square", location: "Lahore" },
-  { id: 8, title: "Corporate Gala", category: "corporate", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", aspect: "wide", location: "Islamabad" },
-  { id: 9, title: "Nikah Ceremony", category: "nikah", image: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&q=80", aspect: "tall", location: "Sahiwal" },
-  { id: 10, title: "Mehndi Details", category: "mehndi", image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80", aspect: "wide", location: "Vehari" },
-  { id: 11, title: "Bridal Getting Ready", category: "bridal", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80", aspect: "square", location: "Multan" },
-  { id: 12, title: "Couple Session", category: "couple", image: "https://images.unsplash.com/photo-1520854221256-17451cc791c8?w=800&q=80", aspect: "tall", location: "Lahore" },
-  { id: 13, title: "Barat Entrance", category: "barat", image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80", aspect: "wide", location: "Burewala" },
-  { id: 14, title: "Walima Decor", category: "walima", image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80", aspect: "square", location: "Faisalabad" },
-  { id: 15, title: "Designer Campaign", category: "fashion", image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&q=80", aspect: "tall", location: "Lahore" },
-  { id: 16, title: "Brand Launch", category: "corporate", image: "https://images.unsplash.com/photo-1505373877841-8d25f2984756?w=800&q=80", aspect: "wide", location: "Islamabad" },
-  { id: 17, title: "Intimate Nikah", category: "nikah", image: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80", aspect: "square", location: "Bahawalnagar" },
-  { id: 18, title: "Mehndi Dance", category: "mehndi", image: "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=800&q=80", aspect: "tall", location: "Multan" },
+  { id: 1, title: "Barat Groom Portrait — Dr. Umair", category: "barat", image: "/portfolio/barat-01-dr-umair.jpg", aspect: "square", location: "Punjab, Pakistan" },
+  { id: 2, title: "Bridal Editorial — The Muse", category: "bridal", image: "/portfolio/bridal-01-mishi-joiya.jpg", aspect: "square", location: "Burewala" },
+  { id: 3, title: "Bridal Portrait — Golden Leaves", category: "bridal", image: "/portfolio/bridal-02-anmol-golden-leaves.jpg", aspect: "square", location: "Burewala" },
+  { id: 4, title: "Outdoor Bridal Glow-Up — Abeeha Hussain", category: "bridal", image: "/portfolio/bridal-03-abeeha-outdoor.jpg", aspect: "square", location: "Burewala" },
+  { id: 5, title: "Barat Groom Ready (GRWM)", category: "barat", image: "/portfolio/barat-02-groom-grwm.jpg", aspect: "square", location: "Burewala" },
+  { id: 6, title: "Bridal Salon Makeover — Fashion Editorial", category: "fashion", image: "/portfolio/fashion-01-salon-makeover.jpg", aspect: "tall", location: "Burewala" },
+  { id: 7, title: "Outdoor Mehndi Setup", category: "mehndi", image: "/portfolio/mehndi-01-outdoor-setup.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 8, title: "Groom Ready — Amir", category: "barat", image: "/portfolio/barat-03-amir-groom.jpg", aspect: "wide", location: "Punjab, Pakistan" },
+  { id: 9, title: "Outdoor Bridal Film — Canal Bungalow", category: "bridal", image: "/portfolio/bridal-04-canal-bungalow-a.jpg", aspect: "tall", location: "Burewala" },
+  { id: 10, title: "Outdoor Bridal Film — Canal Bungalow II", category: "bridal", image: "/portfolio/bridal-05-canal-bungalow-b.jpg", aspect: "tall", location: "Burewala" },
 ];
 
 export const featuredFilm = {
-  title: "Amara & Hassan — A Cinematic Wedding Film",
-  youtubeId: "dQw4w9WgXcQ",
-  description: "A timeless love story captured across three days of Nikah, Mehndi, and Walima celebrations in Lahore.",
+  title: "Barat Groom GRWM — Cinematic Wedding Film",
+  youtubeId: "wF_5efX_Kwo",
+  description: "A cinematic look at the quiet moments before the celebration — the groom getting ready ahead of his Barat, captured with Royal Studio's signature editorial style.",
 };
 
 export const weddingFilms = [
-  { id: 1, title: "Amara & Hassan", youtubeId: "dQw4w9WgXcQ", location: "Lahore", duration: "12 min" },
-  { id: 2, title: "Sana & Omar", youtubeId: "dQw4w9WgXcQ", location: "Multan", duration: "15 min" },
-  { id: 3, title: "Fatima & Ali", youtubeId: "dQw4w9WgXcQ", location: "Burewala", duration: "10 min" },
-  { id: 4, title: "Zainab & Usman", youtubeId: "dQw4w9WgXcQ", location: "Faisalabad", duration: "14 min" },
+  { id: 1, title: "Barat Ceremony — Grand Vista", youtubeId: "QF3BmojTrKQ", location: "Wah Cantt", duration: "0:37" },
+  { id: 2, title: "The Most Epic Mehndi Night", youtubeId: "UgG6hsk5AU8", location: "Punjab, Pakistan", duration: "2:26" },
+  { id: 3, title: "Walima Day, Made Timeless", youtubeId: "IHpGkLHnmpU", location: "Punjab, Pakistan", duration: "0:56" },
+  { id: 4, title: "Nikah Setup — Faisal's Nikah", youtubeId: "qqC4CAEDWF8", location: "Chishtian", duration: "0:56" },
+  { id: 5, title: "Elegant Barat Decor", youtubeId: "89LnBRn3KXw", location: "Burewala", duration: "0:36" },
+  { id: 6, title: "Mayoun Celebration", youtubeId: "zZ1eGi64B00", location: "Punjab, Pakistan", duration: "0:18" },
 ];
+
+export const googleRating = {
+  score: 4.9,
+  reviewCount: 74,
+};
 
 export const testimonials: Testimonial[] = [
   {
-    quote: "Royal Studio captured our wedding with such elegance and emotion. Every photo feels like a work of art. Muhammad and Talha's team was professional, warm, and incredibly talented.",
-    author: "Amara & Hassan",
-    event: "Nikah, Mehndi & Walima",
-    location: "Lahore",
+    quote: "I had an amazing experience at Royal Studio! The team was incredibly professional and made me feel at ease throughout the entire session. The quality of the photos was outstanding — every shot was sharp, creative, and beautifully edited.",
+    author: "Mehak Ch",
+    event: "Verified Google Review",
   },
   {
-    quote: "Our cinematic wedding film brought tears to our eyes. The drone shots, the music, the storytelling — absolutely world-class. Worth every rupee.",
-    author: "Sana & Omar",
-    event: "Destination Wedding",
-    location: "Multan",
+    quote: "Had an amazing experience at Royal Studio! The team was professional, creative, and made the entire shoot stress-free. The photos turned out stunning - exceeded my expectations! Highly recommend for anyone looking for high-quality photography services.",
+    author: "Makeover By Laila",
+    event: "Verified Google Review",
   },
   {
-    quote: "From consultation to album delivery, everything was seamless. They documented 3000+ weddings and it shows — pure professionalism and luxury service.",
-    author: "Fatima & Ali",
-    event: "Royal Signature Package",
+    quote: "Wondering experience — I loved the creativity and effort you put in the shoot, result turned out lovely. Highly recommend by my side.",
+    author: "Abeeha Hussain",
+    event: "Verified Google Review",
     location: "Burewala",
   },
   {
-    quote: "The bridal portraits were stunning. Our families still talk about the album quality. Royal Studio is the best wedding photographer in Burewala.",
-    author: "Zainab & Usman",
-    event: "Bridal & Walima",
-    location: "Faisalabad",
+    quote: "Mashallah great work by Royal Studio, specially Ramzan Bhai and Talha doing great job, nice results and edition outstanding, keep it up bro.",
+    author: "Hamza Fareed",
+    event: "Verified Google Review",
+  },
+  {
+    quote: "Their services are excellent and I prefer to book with them on your every event, they make your event memorable. Thanks to them for making my event memorable.",
+    author: "Rai Sabir",
+    event: "Verified Google Review",
+  },
+  {
+    quote: "Our experience was so good with Royal Studio, they delivered more than our expectations.",
+    author: "Malik Ali",
+    event: "Verified Google Review",
+  },
+  {
+    quote: "Very good experience, team are so talented, their photographic skills are amazing.",
+    author: "Umair Ch",
+    event: "Verified Google Review",
+  },
+  {
+    quote: "Fabulous Royal Studio. Every video shooting is wonderful.",
+    author: "Zainab Shehzad",
+    event: "Verified Google Review",
   },
 ];
 
@@ -388,37 +405,70 @@ export const blogPosts: BlogPost[] = [
     slug: "wedding-planning-checklist-pakistan",
     title: "The Ultimate Wedding Planning Checklist for Pakistani Couples",
     excerpt: "A comprehensive guide to planning your Nikah, Mehndi, Barat, and Walima with confidence.",
-    image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80",
+    image: "/portfolio/barat-01-dr-umair.jpg",
     date: "June 15, 2026",
     category: "Wedding Planning",
-    content: "Planning a Pakistani wedding involves coordinating multiple events across several days...",
+    content:
+      "Planning a Pakistani wedding means coordinating several distinct events — Nikah, Mehndi, Barat, and Walima — each with its own venue, guest list, outfits, and vendors. Unlike a single-day wedding, a multi-event celebration rewards couples who start early and work from a clear timeline rather than tackling everything at once.\n\n" +
+      "**Start with your date and budget.** Before booking anything, agree as a family on rough dates for each event and a total budget split across venue, catering, outfits, decor, and photography/videography. In Pakistan, wedding season (typically the cooler months) books up venues and vendors fastest, so if your date falls in peak season, aim to lock in your venue and photographer 6–12 months out. Off-season dates give you more flexibility and often better rates.\n\n" +
+      "**Book your venue and photographer early — in that order.** Your venue determines your date, guest capacity, and decor constraints, so it comes first. Your photographer and videographer should be next, before caterers and decorators, because good studios get booked out months in advance for popular dates. Waiting until a few weeks before the wedding to look for a photographer usually means settling for whoever is still available, not who you'd actually choose.\n\n" +
+      "**Plan each event with its own shot list in mind.** Nikah is intimate and paperwork-driven — plan for signing moments, close family portraits, and quiet reaction shots. Mehndi is colorful and high-energy — decor details, dance performances, and candid moments matter most. Barat is about grandeur — the groom's entrance, the couple's first moments together, and the stage. Walima is the most photographed event for most families — formal portraits, family groupings, and the reception itself. Share this breakdown with your photographer during consultation so coverage hours are allocated where you actually want them.\n\n" +
+      "**Coordinate hair, makeup, and photography timing.** This is the most common scheduling mistake: outfits and makeup running late pushes back golden-hour portraits, drone coverage windows, or the Barat entrance itself. Build in buffer time between getting-ready and the ceremony, and share your makeup artist's contact with your photography team so timings can be coordinated directly.\n\n" +
+      "**Confirm deliverables and delivery timelines in writing.** Before signing with any vendor, know exactly what you're getting: how many edited photos, whether a highlight film is included, how long albums take to arrive, and what the delivery window is. A clear agreement protects both sides and avoids disappointment months later when memories matter most.\n\n" +
+      "**Don't forget the details that get missed under stress.** Confirm travel and accommodation for out-of-city guests early, keep a running list of vendor payment schedules and deposits, and delegate a trusted family member to handle day-of logistics so you can actually be present for your own wedding instead of managing it.\n\n" +
+      "A Pakistani wedding is really four events stitched into one story. The couples who enjoy the process most are the ones who plan early, communicate clearly with every vendor, and leave enough breathing room in the schedule for things to run a little late — because in a celebration this size, something always does.",
   },
   {
     slug: "choose-wedding-photographer",
     title: "How to Choose the Right Wedding Photographer in Pakistan",
     excerpt: "Expert tips on evaluating portfolios, packages, and finding your perfect match.",
-    image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
+    image: "/portfolio/bridal-04-canal-bungalow-a.jpg",
     date: "June 1, 2026",
     category: "Photography Tips",
-    content: "Your wedding photos will last a lifetime. Here's how to choose wisely...",
+    content:
+      "Your wedding photographer is one of the few vendors whose work you'll still be looking at decades later. With dozens of studios advertising in every city, here's how to actually evaluate who's right for your day.\n\n" +
+      "**Look at full galleries, not just highlight reels.** Instagram grids and showreels are curated to show only the best few seconds or frames from an entire event. Before booking, ask to see a full, unedited-order gallery from one complete wedding — ideally one similar in scale to yours. This tells you how consistent the work is across hundreds of real, unposed moments, not just the ten best shots.\n\n" +
+      "**Match their style to what you actually want.** Editorial and cinematic are popular buzzwords, but styles vary a lot in practice — some studios lean toward candid documentary coverage, others toward posed, magazine-style portraits with heavy lighting and retouching. Look through several complete galleries and ask yourself which one matches how you want to remember your day, not just which looks most impressive as a single image.\n\n" +
+      "**Ask about team size and who actually shoots your wedding.** Many studios book multiple weddings on the same weekend and send associate photographers rather than the person whose portfolio you were shown. Ask directly who will be on-site for your event, how many photographers and cinematographers are included, and whether that's guaranteed in writing.\n\n" +
+      "**Understand what's included before comparing prices.** A lower quote often means fewer coverage hours, fewer edited photos, or no album included. When comparing packages, normalize for what you're actually getting: hours of coverage, number of shooters, edited photo count, whether a highlight film and drone coverage are included, and album quality. The cheapest package on paper is sometimes the most expensive once you add back what was left out.\n\n" +
+      "**Check reviews and real client feedback, not just testimonials on the studio's own site.** Look at Google reviews, wedding marketplaces, and comments on real posts — patterns across many independent reviews tell you more than a handful of curated quotes ever will.\n\n" +
+      "**Get everything in writing before you pay a deposit.** Your agreement should clearly state the date, coverage hours, deliverables, delivery timeline, payment schedule, and cancellation/rescheduling terms. A studio that's reluctant to put commitments in writing is telling you something important before you've paid anything.\n\n" +
+      "**Meet or call before committing.** However good a portfolio looks, you'll be spending one of the most important days of your life alongside this team. A short call or in-person consultation tells you a lot about communication style, responsiveness, and whether they actually listen to what you want — which matters just as much as the equipment they carry.\n\n" +
+      "The right photographer isn't necessarily the most expensive or the most followed on Instagram — it's the one whose real, complete work matches your taste, who is transparent about what's included, and who you trust to be calm and attentive on a day that will only happen once.",
   },
   {
     slug: "bridal-portrait-guide",
     title: "Bridal Portrait Guide: Posing, Lighting & Timing",
     excerpt: "Everything brides need to know for stunning editorial portraits.",
-    image: "https://images.unsplash.com/photo-1594552070431-25809a90ccc2?w=800&q=80",
+    image: "/portfolio/bridal-02-anmol-golden-leaves.jpg",
     date: "May 20, 2026",
     category: "Bridal Guides",
-    content: "The perfect bridal portrait session starts with preparation...",
+    content:
+      "Bridal portraits are some of the most looked-at images from any wedding — they're the ones printed largest in albums, shared most on social media, and remembered longest. A little preparation on timing, lighting, and posing makes the difference between portraits that feel stiff and ones that feel effortless.\n\n" +
+      "**Timing matters more than most brides expect.** The one to two hours around sunrise and sunset — golden hour — produce the softest, most flattering light, with warm tones and gentle shadows that suit most skin tones and outfit colors. If your portrait session can be scheduled around golden hour, even a simple location will look far more polished than a midday shoot in harsh overhead light. For indoor or studio sessions, ask your photographer what time of day their natural light is best, since window light shifts dramatically through the day.\n\n" +
+      "**Coordinate with your makeup artist on timing, not just the look.** A rushed getting-ready sequence is the most common reason portrait sessions run late and lose their best light window. Share your photography start time with your makeup artist in advance, and build in 20–30 minutes of buffer — heavy bridal makeup and elaborate outfits almost always take longer than planned.\n\n" +
+      "**Posing works best as movement, not held positions.** Static, stiffly-held poses tend to look tense in photos. Experienced photographers guide you through small movements — a slow turn, a soft laugh, adjusting your dupatta or jewelry — and capture the natural moment in between rather than a frozen pose. If you're nervous in front of the camera, tell your photographer directly; a good one will give you simple, specific directions (“look down, then slowly look back up”) rather than a vague “just be natural,” which is hard advice to follow on the day.\n\n" +
+      "**Let your outfit and jewelry lead the composition.** Heavy bridal wear photographs differently than everyday clothing — trains, dupattas, and layered jewelry all need a moment to settle before a shot rather than being captured mid-movement. Simple additions like a slow spin to let a lehnga fall naturally, or a still beat after adjusting jewelry, give your photographer a much better window to capture detail shots that matter later — the handwork on your outfit, the earrings, the mehndi.\n\n" +
+      "**Scout the location, or trust your photographer to.** Backgrounds with too much visual clutter compete with the bride rather than supporting her. Clean, simple backdrops — a plain wall, natural greenery, soft indoor light — usually photograph better than busy or highly decorated spaces. If you're shooting at a venue, a short walkthrough beforehand (in person or over photos/video call) helps identify the two or three spots that will actually work.\n\n" +
+      "**Plan for both solo portraits and getting-ready coverage.** Some of the most treasured images from a wedding day end up being candid getting-ready moments — a mother adjusting her daughter's dupatta, a quiet moment before the ceremony — alongside the formal portraits. If these matter to you, say so explicitly when discussing coverage, since not every package includes dedicated getting-ready time.\n\n" +
+      "Great bridal portraits come down to light, timing, and a little trust between you and your photographer — the technical side is their job, but showing up with a plan for timing and communicating what matters to you makes all the difference in what you get back.",
   },
   {
     slug: "behind-the-scenes-royal-studio",
     title: "Behind the Scenes: A Royal Studio Wedding Weekend",
-    excerpt: "Go behind the lens with our team during a three-day Lahore celebration.",
-    image: "https://images.unsplash.com/photo-1493863641943-9b67192fddc6?w=800&q=80",
+    excerpt: "Go behind the lens with our team and see how a Royal Studio wedding weekend comes together, from first inquiry to final delivery.",
+    image: "/team/team.webp",
     date: "May 5, 2026",
     category: "Behind the Scenes",
-    content: "Our team arrived in Lahore on Thursday for a weekend of celebrations...",
+    content:
+      "Couples usually only see the finished gallery and film — the polished end result of a process that actually starts months before the wedding day itself. Here's what happens on our end, from the first message to the final delivery.\n\n" +
+      "**It starts with a conversation, not a contract.** Every booking begins with a couple sharing their date, venue, and vision — sometimes over WhatsApp, sometimes as a form submission through the website. We follow up with a consultation to understand which events we're covering (Nikah, Mehndi, Barat, Walima, or a combination), the style the couple wants, and any specific shots or moments that matter most to their family. This is also when we walk through package options and answer questions honestly, including what isn't included, so there are no surprises later.\n\n" +
+      "**Booking locks in the date, but planning is where the details get sorted.** Once a couple signs and secures their date with a deposit, our team moves into detailed planning: confirming venue logistics, coordinating timing with makeup artists and event planners, and building a rough shot list per event so coverage time is spent where it matters most. For multi-day, multi-city weddings, this stage also covers travel and equipment logistics for our team.\n\n" +
+      "**On the wedding day itself, the team works in parallel, not in sequence.** A typical event has photographers covering formal portraits and candid moments simultaneously, a cinematographer capturing ceremony audio and multi-camera footage, and — where the venue and weather allow — drone coverage for aerial shots of the venue and procession. With a team of 10–15 members across our studio, we can scale coverage up for multi-day, multi-venue celebrations without stretching any one person too thin.\n\n" +
+      "**The real work often begins after the wedding ends.** Once footage and photos are in, our editing team culls thousands of raw frames down to the couple's final edited gallery, color-grades and retouches selected images, and begins assembling the wedding film — syncing audio, cutting for pace, and licensing music. This stage is where a wedding day's worth of raw material becomes a coherent story, and it's usually the longest part of the process.\n\n" +
+      "**Album design closes the loop.** For couples who've chosen a luxury album, our team lays out spreads that tell the day's story in sequence — not just a random selection of favorites — before sending proofs for approval and moving to print.\n\n" +
+      "**Delivery is the moment it all comes together.** Our standard turnaround is within 20 days for photo galleries and films, with faster delivery available on select packages. Couples get their online gallery first, followed by their film and any physical albums as those are completed.\n\n" +
+      "None of this happens in isolation — every wedding we shoot involves consultation, planning, a coordinated team on the day, and weeks of editing before a couple ever sees the final result. It's a longer process than most people expect, but it's also why the final gallery holds up when a couple looks back on it years later.",
   },
 ];
 
@@ -442,8 +492,6 @@ export const seoKeywords = [
   "Walima Photography",
 ];
 
-export const heroVideo =
-  "https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_25fps.mp4";
+export const heroVideoId = "QF3BmojTrKQ";
 
-export const heroPoster =
-  "https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=85";
+export const heroPoster = `https://img.youtube.com/vi/${heroVideoId}/maxresdefault.jpg`;

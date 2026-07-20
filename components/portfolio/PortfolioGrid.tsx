@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { Camera, X } from "lucide-react";
 import {
   portfolioCategories,
   portfolioItems,
@@ -79,6 +79,29 @@ export default function PortfolioGrid({
           </div>
         </AnimatedSection>
 
+        {displayed.length === 0 ? (
+          <div className="flex flex-col items-center justify-center rounded-[12px] border border-dashed border-border bg-background px-6 py-20 text-center">
+            <Camera size={32} className="mb-4 text-accent/60" strokeWidth={1.5} />
+            <h3 className="font-display text-2xl text-primary">
+              {portfolioCategories.find((cat) => cat.id === activeFilter)?.label}{" "}
+              Stories Are on the Way
+            </h3>
+            <p className="mt-2 max-w-md text-sm text-text-muted">
+              We&apos;re adding new work to this category soon. In the meantime,
+              browse our full portfolio or reach out to see recent{" "}
+              {portfolioCategories.find((cat) => cat.id === activeFilter)?.label.toLowerCase()}{" "}
+              coverage.
+            </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+              <Button variant="outline" onClick={() => setActiveFilter("all")}>
+                View Full Portfolio
+              </Button>
+              <Button asChild variant="accent">
+                <Link href="/contact">Contact Us</Link>
+              </Button>
+            </div>
+          </div>
+        ) : (
         <motion.div layout className="columns-1 gap-4 sm:columns-2 lg:columns-3">
           <AnimatePresence mode="popLayout">
             {displayed.map((item, i) => (
@@ -127,6 +150,7 @@ export default function PortfolioGrid({
             ))}
           </AnimatePresence>
         </motion.div>
+        )}
 
         {hasMore && (
           <div className="mt-10 text-center">

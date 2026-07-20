@@ -35,7 +35,7 @@ export default function AboutPreview() {
             <div className="relative">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[12px] shadow-premium-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1493863641943-9b67192fddc6?w=800&q=80"
+                  src="/team/co-founders.webp"
                   alt="Royal Studio founders and team"
                   fill
                   className="object-cover"

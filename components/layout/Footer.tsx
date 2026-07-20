@@ -10,10 +10,25 @@ import {
 import { navLinks, siteConfig } from "@/lib/data";
 import Logo from "./Logo";
 
+function TiktokIcon({ size = 18 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M16.6 5.82c-1.02-.9-1.6-2.19-1.6-3.57h-3.16v13.3c0 1.6-1.3 2.9-2.9 2.9a2.9 2.9 0 0 1 0-5.8c.28 0 .55.04.8.11V9.4a6.06 6.06 0 0 0-.8-.05c-3.36 0-6.08 2.72-6.08 6.08S6.34 21.5 9.7 21.5s6.08-2.72 6.08-6.08V8.7a8.7 8.7 0 0 0 5.08 1.63V7.17a4.85 4.85 0 0 1-4.26-1.35Z" />
+    </svg>
+  );
+}
+
 const socials = [
   { icon: Instagram, href: siteConfig.social.instagram, label: "Instagram" },
   { icon: Facebook, href: siteConfig.social.facebook, label: "Facebook" },
   { icon: Youtube, href: siteConfig.social.youtube, label: "YouTube" },
+  { icon: TiktokIcon, href: siteConfig.social.tiktok, label: "TikTok" },
 ];
 
 export default function Footer() {

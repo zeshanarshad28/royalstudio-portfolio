@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   description: `Learn about Royal Studio — luxury wedding photography in Burewala, Pakistan. Founded in ${siteConfig.established} by ${siteConfig.founders.join(" & ")}. 3000+ weddings documented.`,
 };
 
+const founderPhotos: Record<string, string> = {
+  "Muhammad Ramzan": "/team/muhammad-ramzan.webp",
+  "Talha Ramay": "/team/talha-ramay.webp",
+};
+
 export default function AboutPage() {
   return (
     <main>
@@ -62,19 +67,30 @@ export default function AboutPage() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.1}>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[12px] shadow-premium-lg">
-                <Image
-                  src="https://images.unsplash.com/photo-1493863641943-9b67192fddc6?w=800&q=80"
-                  alt="Royal Studio team at work"
-                  fill
-                  className="object-cover"
-                  sizes="50vw"
-                />
+              <div className="relative">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-[12px] shadow-premium-lg">
+                  <Image
+                    src="/team/co-founders.webp"
+                    alt="Royal Studio co-founders together"
+                    fill
+                    className="object-cover"
+                    sizes="50vw"
+                  />
+                </div>
+                <div className="absolute -bottom-8 -left-8 hidden aspect-[4/5] w-40 overflow-hidden rounded-[12px] border-4 border-surface shadow-premium-lg sm:block md:w-48">
+                  <Image
+                    src="/team/team.webp"
+                    alt="Muhammad Ramzan and Talha Ramay at a Royal Studio branded event"
+                    fill
+                    className="object-cover"
+                    sizes="192px"
+                  />
+                </div>
               </div>
             </AnimatedSection>
           </div>
 
-          <AnimatedSection className="mt-24">
+          <AnimatedSection className="mt-24 sm:mt-16">
             <SectionHeading
               label="Founders"
               title="Meet the Visionaries"
@@ -86,8 +102,14 @@ export default function AboutPage() {
                   key={founder}
                   className="rounded-[12px] border border-border bg-background p-8 text-center shadow-premium"
                 >
-                  <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-accent/10 font-display text-2xl text-accent">
-                    {founder.split(" ").map((n) => n[0]).join("")}
+                  <div className="relative mx-auto mb-4 h-20 w-20 overflow-hidden rounded-full shadow-premium">
+                    <Image
+                      src={founderPhotos[founder]}
+                      alt={founder}
+                      fill
+                      className="object-cover"
+                      sizes="80px"
+                    />
                   </div>
                   <h3 className="font-display text-2xl text-primary">{founder}</h3>
                   <p className="mt-1 text-sm text-accent">Co-Founder</p>

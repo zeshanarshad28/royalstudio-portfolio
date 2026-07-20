@@ -2,22 +2,24 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { heroPoster, heroVideo, siteConfig } from "@/lib/data";
+import { heroPoster, heroVideoId, siteConfig } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster={heroPoster}
-        className="absolute inset-0 h-full w-full object-cover"
-      >
-        <source src={heroVideo} type="video/mp4" />
-      </video>
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-primary">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroPoster})` }}
+      />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 h-[56.25vw] min-h-full w-[177.78vh] min-w-full -translate-x-1/2 -translate-y-1/2">
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${heroVideoId}?autoplay=1&mute=1&loop=1&playlist=${heroVideoId}&controls=0&showinfo=0&modestbranding=1&playsinline=1&iv_load_policy=3&rel=0&disablekb=1`}
+          title="Royal Studio wedding film"
+          allow="autoplay; encrypted-media"
+          className="h-full w-full"
+        />
+      </div>
 
       <div className="absolute inset-0 bg-primary/55" />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-primary/30" />

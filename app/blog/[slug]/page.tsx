@@ -72,15 +72,20 @@ export default async function BlogPostPage({ params }: Props) {
 
         <div className="mx-auto max-w-3xl px-6 py-16 md:px-12">
           <p className="text-lg leading-relaxed text-text-muted">{post.excerpt}</p>
-          <div className="prose prose-neutral mt-8 max-w-none">
-            <p className="leading-relaxed text-text">{post.content}</p>
-            <p className="leading-relaxed text-text">
-              At Royal Studio, we believe every Pakistani wedding deserves to be
-              documented with the same editorial excellence seen in the world&apos;s
-              finest wedding publications. Whether you&apos;re planning a Nikah in
-              Burewala or a destination Walima in Lahore, our team brings cinematic
-              artistry and warm professionalism to every celebration.
-            </p>
+          <div className="prose prose-neutral mt-8 max-w-none space-y-5">
+            {post.content.split("\n\n").map((paragraph, i) => (
+              <p key={i} className="leading-relaxed text-text">
+                {paragraph.split(/(\*\*.+?\*\*)/g).map((chunk, j) =>
+                  chunk.startsWith("**") && chunk.endsWith("**") ? (
+                    <strong key={j} className="text-primary">
+                      {chunk.slice(2, -2)}
+                    </strong>
+                  ) : (
+                    chunk
+                  )
+                )}
+              </p>
+            ))}
           </div>
           <Link
             href="/blog"

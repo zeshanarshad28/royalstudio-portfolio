@@ -23,6 +23,7 @@ export function getLocalBusinessSchema() {
       siteConfig.social.instagram,
       siteConfig.social.facebook,
       siteConfig.social.youtube,
+      siteConfig.social.tiktok,
     ],
     priceRange: "PKR 50000 - PKR 300000",
     areaServed: siteConfig.citiesServed,

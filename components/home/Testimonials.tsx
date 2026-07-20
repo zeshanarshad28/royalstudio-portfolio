@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { testimonials } from "@/lib/data";
+import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
+import { googleRating, testimonials } from "@/lib/data";
 import SectionHeading from "@/components/shared/SectionHeading";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 
@@ -25,6 +25,21 @@ export default function Testimonials() {
             label="Testimonials"
             title="Loved by Couples Across Pakistan"
           />
+          <div className="-mt-8 mb-12 flex items-center justify-center gap-2 md:-mt-12">
+            <div className="flex items-center gap-0.5">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star
+                  key={i}
+                  size={16}
+                  className="fill-accent text-accent"
+                />
+              ))}
+            </div>
+            <p className="text-sm text-text-muted">
+              <span className="font-medium text-primary">{googleRating.score}</span>{" "}
+              from {googleRating.reviewCount} Google reviews
+            </p>
+          </div>
         </AnimatedSection>
 
         <div className="relative mx-auto max-w-4xl">
